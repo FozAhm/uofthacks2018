@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+   <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
   <head>
     <meta charset="utf-8" />
     <title>UoT V Hackathon Hack</title>
     <link rel='stylesheet' href='Style.css'/>
     <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
   </head>
-  <h1> Learn 2 Pushup</h1>
 <body>
-  <img class="get_swole" src="assets/pushup.jpg"></img>
 <div class="wrapper">
-  <div class = "intro"> <h2> Learn 2 Pushup</h2>
+  <div class = "header">
+    <p2>Learn 2 Pushup</p2>
+    <p3> <a href="https://github.com/FozAhm/uofthacks2018"> Github </p3> </a>
+  </div>
+  <img class="get_swole" src="assets/pushup.jpg" width="100%"></img>
+  <div class = "intro">
     <p1> Have you considered actually working on your pushups properly? Well with <strong> Learn 2 Pushup</strong>
-    even the least respectable person can do respectable pushups.  </p1>
+    even the least respectable person can do respectable pushups. Via using tenserflow and Open CV, our team created a
+  simple way to make sure your preforming them properly.</p1>
    </div>
   <div class = "app">
-    <p> The link to the bloody python app with AJAX, or something. "Yells in Javascript" </p>
+    <p4> The link to the python app with AJAX, or something. "Yells in Javascript" </p4>
+    <p id="demo"></p>
+  <script>
 
+  var myJSON = '{ "goal":"25", "correct":12, "incorrect":"2" }';
+  var myObj = JSON.parse(myJSON);
+  document.getElementById("demo").innerHTML = myObj.correct + " Correct" + "/" + myObj.goal + " Goal" +
+  myObj.incorrect + " Incorrect";
+
+  </script>
+  <p3> Data fed from JSON files </p3>
   <script> type="ajaxistan/javascript" src="suffering_via_ajax.js"></script>
   <script> type="push_counter/javascript" src "push_counter.js"> </script>
-  <div id="container"></div>
-
-
+  <!-- <div id="container"></div> -->
   </div>
 
 
